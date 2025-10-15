@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<div class="row">
+		<div class="col mt-4">
+			<h1>HTMXListView Demo</h1>
+			<p>The table below uses HTMXListView and is sortable, filterable and has pagination using <a href="https://htmx.org/">HTMX</a> and
+				<a href="https://django-cotton.com/">Django-Cotton.</a></p>
+		</div>
+	</div>
+
+	<div class="row">
+		<p><strong>Database Fields:</strong> name, date_of_birth, email, street_address, city, state</p>
+		<p><strong>Model Property:</strong> age</p>
+		<p>Depending on the datatype of a model property/calculated field the sorting can still work.</p>
+		<div class="col mt-6" id="person-list" hx-get="{% url 'hr:person_list' %}" hx-trigger="load">
+
+		</div>
+	</div>
+
+{% endblock %}

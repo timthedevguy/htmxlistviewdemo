@@ -1,0 +1,29 @@
+<div class="table-responsive">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<c-tables.header_cell name="name">Name</c-tables.header_cell>
+				<c-tables.header_cell name="date_of_birth">D.O.B.</c-tables.header_cell>
+				<c-tables.header_cell name="age">Age</c-tables.header_cell>
+				<c-tables.header_cell name="email">Email</c-tables.header_cell>
+				<c-tables.header_cell name="street_address">Street Address</c-tables.header_cell>
+				<c-tables.header_cell name="city">City</c-tables.header_cell>
+				<c-tables.header_cell name="state">State</c-tables.header_cell>
+			</tr>
+		</thead>
+		<tbody>
+		{% for item in object_list %}
+			<tr>
+				<td>{{ item.name }}</td>
+				<td>{{ item.date_of_birth }}</td>
+				<td>{{ item.age }}</td>
+				<td>{{ item.email }}</td>
+				<td>{{ item.street_address }}</td>
+				<td>{{ item.city }}</td>
+				<td>{{ item.state }}</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+<c-tables.pager />
+</div>
